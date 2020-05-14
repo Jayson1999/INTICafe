@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/menuTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="32dp"
+        android:drawableLeft="@drawable/intilogo50"
+        android:gravity="center"
+        android:text="Ordering Menu"
+        android:textColor="@android:color/widget_edittext_dark"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:fontFamily="sans-serif-thin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuTV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/foodTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textColor="@android:color/widget_edittext_dark"
+                android:textSize="24sp"
+                app:fontFamily="sans-serif-thin"
+                tools:layout_editor_absoluteX="189dp"
+                tools:layout_editor_absoluteY="68dp" />
+
+            <GridView
+                android:id="@+id/foodGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9c0618"
+                android:nestedScrollingEnabled="true"
+                android:numColumns="auto_fit"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/drinkTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drinks"
+                android:textColor="@android:color/widget_edittext_dark"
+                android:textSize="24sp"
+                android:typeface="serif"
+                app:fontFamily="sans-serif-thin"
+                tools:layout_editor_absoluteX="186dp"
+                tools:layout_editor_absoluteY="321dp" />
+
+            <GridView
+                android:id="@+id/drinkGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#9c0618"
+                android:nestedScrollingEnabled="true"
+                android:numColumns="2"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="348dp" />
+
+            <Button
+                android:id="@+id/orderBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cartOnClick"
+                android:text="View Cart &amp; Order"
+                tools:layout_editor_absoluteX="127dp"
+                tools:layout_editor_absoluteY="619dp" />
+
+            <Button
+                android:id="@+id/profile"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:onClick="ProfileOnClick"
+                android:text="View Profile"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="675dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

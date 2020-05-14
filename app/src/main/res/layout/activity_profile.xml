@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/profileTV"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="  INTI CAFÉ User Profile"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        app:fontFamily="sans-serif-thin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo3" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nameLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Username"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:layout_editor_absoluteY="292dp" />
+
+                <ImageButton
+                    android:id="@+id/editName"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="32dp"
+                    android:onClick="editNameOnClick"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    tools:layout_editor_absoluteX="354dp"
+                    tools:layout_editor_absoluteY="288dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contactLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Contact No."
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:layout_editor_absoluteY="343dp" />
+
+                <ImageButton
+                    android:id="@+id/editContact"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="32dp"
+                    android:onClick="editContactOnClick"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    tools:layout_editor_absoluteX="354dp"
+                    tools:layout_editor_absoluteY="341dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/postLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/postcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Postcode"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:layout_editor_absoluteY="394dp" />
+
+                <ImageButton
+                    android:id="@+id/editPostcode"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="32dp"
+                    android:onClick="editPostcodeOnClick"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    tools:layout_editor_absoluteX="354dp"
+                    tools:layout_editor_absoluteY="395dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/areaLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Area"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    tools:layout_editor_absoluteX="32dp"
+                    tools:layout_editor_absoluteY="445dp" />
+
+                <ImageButton
+                    android:id="@+id/editArea"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="32dp"
+                    android:onClick="editAreaOnClick"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    tools:layout_editor_absoluteX="354dp"
+                    tools:layout_editor_absoluteY="448dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/orderHistory"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="historyOnClick"
+                android:text="View Order History"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="578dp" />
+
+            <Button
+                android:id="@+id/logout"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@android:drawable/ic_lock_power_off"
+                android:onClick="logoutOnClick"
+                android:text="Log Out" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/logo3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/intilogo" />
+
+</android.support.constraint.ConstraintLayout>
